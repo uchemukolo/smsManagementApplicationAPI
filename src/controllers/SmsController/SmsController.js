@@ -127,7 +127,7 @@ export default class SmsController {
     try {
       const { id } = request.user;
       const { messageId } = request.body;
-      const message = await models.SMS.find({
+      const message = await models.SMS.findOne({
         where: {
           id: messageId,
           receiver_id: id

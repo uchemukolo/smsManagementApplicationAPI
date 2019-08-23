@@ -93,6 +93,7 @@ export default class ContactController {
       }
 
       const token = auth.authenticate(foundUser);
+
       return response.status(200).json({
         success: true,
         message: 'User Logged in successfully',
@@ -152,12 +153,11 @@ export default class ContactController {
     try {
       const { contactId } = request.params;
 
-      const User = await models.Contact.find({
+      const User = await models.Contact.findOne({
         where: {
           id: contactId,
         }
       });
-
       if (User.length < 1) {
         CustomError.handleError('User not found', 404, response);
       }

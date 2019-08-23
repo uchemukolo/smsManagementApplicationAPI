@@ -60,7 +60,6 @@ const auth = {
         message: 'No token provided.'
       });
     }
-
     const decoded = auth.verifyToken(token);
     if (decoded.error) {
       return response.status(401).json({
