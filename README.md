@@ -50,7 +50,7 @@ The project structure follows the **MVC** (Model-View-Controller) pattern.
 $ git clone https://github.com/uchemukolo/smsManagementApplicationAPI.git
 $ cd smsManagementApplicationAPI
 $ npm install
-$ npm run server                  # For development purpose
+$ npm start                 # For development purpose
 ```
 
 You should now be able to access the API via http://localhost:port/api/v1/
